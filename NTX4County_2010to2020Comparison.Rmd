@@ -3,10 +3,7 @@ title: "Census Tract Boundaries Changes (DRAFT)"
 tags: [R,leaflet,Jekyll, html, maps]
 leafletmap: true
 always_allow_html: yes
-output: 
-  md_document:
-    variant: gfm
-    preserve_yaml: true
+output: github_document
 ---
 
 ```{r, include=FALSE, echo=FALSE, warning=FALSE}
@@ -57,7 +54,6 @@ library(leaflet)
 library(sf)
 library(plotly)
 library(knitr)
-library(kableExtra)
 library(htmltools)
 
 ###############################################################################################
@@ -74,7 +70,7 @@ Comparison of 2010 Census Tract boundaries for North Texas 4County and 2020 Cens
 ```{r, fig.height=8, fig.width=8, echo=FALSE, message=FALSE, warning=FALSE}
 #mapbox <- "https://api.mapbox.com/styles/v1/owencpal/ckecb71jp22ct19qc1id28jku/tiles/256/%7Bz%7D/%7Bx%7D/%7By%7D@2x?access_token=pk.eyJ1Ijoib3dlbmNwYWwiLCJhIjoiY2tlYnR3emdxMGNhZzMwb2EzZWR4ajloNCJ9.P7Mujz8F3Rssq5-Q6dcvMw.png"
 
-leaflet() %>%
+map <- leaflet() %>%
   setView(lng = -97.026, lat = 32.918, zoom = 9) %>%
   addProviderTiles(providers$CartoDB.Positron) %>%
   addPolygons(data = tract2020,
@@ -105,5 +101,7 @@ leaflet() %>%
   addLayersControl(baseGroups = "County",
                    overlayGroups = c("2010 Tracts", "2020 Tracts"),
                    options = layersControlOptions(collapsed = FALSE))
+
+widgetframe::frameWidget(map, width = "100%")
 
 ```
