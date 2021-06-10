@@ -1,7 +1,12 @@
 ---
 title: "Census Tract Boundaries Changes (DRAFT)"
-output: github_document
-always_allow_html: true
+tags: [R,leaflet,Jekyll, html, maps]
+leafletmap: true
+always_allow_html: yes
+output: 
+  md_document:
+    variant: gfm
+    preserve_yaml: true
 ---
 
 ```{r, include=FALSE, echo=FALSE, warning=FALSE}
