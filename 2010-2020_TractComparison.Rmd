@@ -58,7 +58,6 @@ map <- leaflet() %>%
                    overlayGroups = c("2010 Tracts", "2020 Tracts"),
                    options = layersControlOptions(collapsed = FALSE))
 
-map
 
-#widgetframe::frameWidget(map, width = "100%", height = "100%")
+widgetframe::frameWidget(map, width = "100%", height = "100%")
 ```
