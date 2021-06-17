@@ -58,6 +58,6 @@ maptract <- leaflet() %>%
                    overlayGroups = c("2010 Tracts", "2020 Tracts"),
                    options = layersControlOptions(collapsed = FALSE))
 
-#widgetframe::frameWidget(maptract)
-maptract
+widgetframe::frameWidget(maptract)
+#maptract
 ```
