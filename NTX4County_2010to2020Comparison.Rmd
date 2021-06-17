@@ -103,5 +103,4 @@ map <- leaflet() %>%
                    options = layersControlOptions(collapsed = FALSE))
 
 widgetframe::frameWidget(map, width = "100%")
-
 ```
