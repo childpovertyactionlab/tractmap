@@ -63,7 +63,7 @@ maprender <- leaflet() %>%
   addFullscreenControl(pseudoFullscreen = TRUE)
 ```
 
-```{r, warning=FALSE, echo=FALSE}
+```{r, warning=FALSE, echo=FALSE, fig.width=9, fig.height=9}
 maprender
 ```
 
