@@ -1,5 +1,5 @@
 ---
-title: "Census Tract Boundaries Changes (DRAFT)"
+title: "Census Tract Boundaries Changes (TEST)"
 tags: [R,leaflet,Jekyll, html, maps]
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
