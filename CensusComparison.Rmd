@@ -9,6 +9,7 @@ knit: (function(input_file, encoding) {
 output: 
   html_document:
     keep_md: TRUE
+    preserve_yaml: TRUE
 ---
 
 Comparison of 2010 Census Tract boundaries for North Texas 4County and 2020 Census Tract boundaries.
