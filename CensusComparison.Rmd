@@ -1,11 +1,13 @@
 ---
 title: "Census Tract Boundaries Changes (THEME)"
+layout: default
 tags: [R,leaflet,Jekyll, html, maps]
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
  encoding=encoding,
  output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+ 
 output: 
   html_document:
     keep_md: TRUE
