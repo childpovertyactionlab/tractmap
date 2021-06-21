@@ -1,3 +1,3 @@
-baseurl: "/tractmap"
+baseurl: ""
 url: "https://childpovertyactionlab.github.io/"
 theme: jekyll-theme-slate
