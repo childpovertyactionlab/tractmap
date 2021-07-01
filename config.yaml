@@ -1,0 +1,12 @@
+theme: "hyde"
+baseURL: https://childpovertyactionlab.github.io/tractmap/
+languageCode: en-us
+title: CPAL
+params:
+  themeColor: "theme-base-0a"
+menu:
+  main:
+    - name: About
+      url: https://childpovertyactionlab.org
+    - name: GitHub
+      url: https://github.com/childpovertyactionlab
