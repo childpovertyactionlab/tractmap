@@ -1,15 +1,10 @@
 ---
 title: "Census Tract Boundaries Changes"
-layout: post
 date: "Last Updated May 2021"
-tags:
-- R
-- leaflet
-- maps
-output:
-  html_document: default
-  github_document: default
-  keep_md: TRUE
+output: 
+  html_document:
+    keep_md: true
+layout: post
 ---
 
 Comparison of 2010 Census Tract boundaries for North Texas 4County and 2020 Census Tract boundaries.
