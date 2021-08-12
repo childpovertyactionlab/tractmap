@@ -1,6 +1,6 @@
 ---
-title: "null"
-author: "null"
+title: ""
+author: ""
 site: bookdown::bookdown_site
 documentclass: book
 bibliography:
@@ -10,7 +10,7 @@ biblio-style: apalike
 link-citations: yes
 favicon: images/favicon.ico
 ---
-# 20210 and 2020 Comparison {-}
+# 2010 and 2020 Comparison {-}
 ## Dallas County Census Tract Map {-}
 
 ```{r, include=FALSE, echo=FALSE, warning=FALSE}
@@ -68,10 +68,14 @@ county <- counties(state = "TX") %>%
 
 Comparison of 2010 Census Tract boundaries for North Texas 4County and 2020 Census Tract boundaries.
 ```{r, fig.height=8, fig.width=8, echo=FALSE, message=FALSE, warning=FALSE}
-#mapbox <- "https://api.mapbox.com/styles/v1/owencpal/ckecb71jp22ct19qc1id28jku/tiles/256/%7Bz%7D/%7Bx%7D/%7By%7D@2x?access_token=pk.eyJ1Ijoib3dlbmNwYWwiLCJhIjoiY2tlYnR3emdxMGNhZzMwb2EzZWR4ajloNCJ9.P7Mujz8F3Rssq5-Q6dcvMw.png"
+#### Mapbox Styling link and leaflet ###################
+cpal_style <- "https://api.mapbox.com/styles/v1/owencpal/ckecb71jp22ct19qc1id28jku/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoib3dlbmNwYWwiLCJhIjoiY2tlYnR3emdxMGNhZzMwb2EzZWR4ajloNCJ9.P7Mujz8F3Rssq5-Q6dcvMw"
+
+map_attr <- "<a href='https://www.mapbox.com/map-feedback/'>Mapbox</a> Basemap <a href='https://childpovertyactionlab.org/'>Child Poverty Action Lab</a>"
+
 leaflet() %>%
   setView(lng = -97.026, lat = 32.918, zoom = 9) %>%
-  addProviderTiles(providers$CartoDB.Positron) %>%
+  addTiles(urlTemplate = cpal_style, attribution = map_attr) %>%
   addPolygons(data = tract2020,
               stroke = TRUE,
               weight = 2,
